@@ -72,9 +72,9 @@ app.post("/updatePass", async (req, res) => {
 
 app.delete("/deleteUser/:id", async (req, res) => {
   const id = req.params.id;
-  const objectId = new mongoose.Types.ObjectId(id);
+  // const objectId = new mongoose.Types.ObjectId(id);
   const Info_Call = await info.deleteOne({
-    _id: objectId,
+    _id: id,
   });
   if (Info_Call.deletedCount == 1) {
     res.json({

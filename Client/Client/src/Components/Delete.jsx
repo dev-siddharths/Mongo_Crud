@@ -8,12 +8,13 @@ const Delete = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log("Clicked");
     try {
       const res = await axios.post("http://localhost:3001/getUserId", {
         username: username,
       });
 
-      if (res.data.status == "Succes") {
+      if (res.data.status == "Success") {
         const user_id = res.data.userid;
         console.log(res.data.userid);
         try {
@@ -28,6 +29,8 @@ const Delete = () => {
         } catch (error) {
           console.log(error);
         }
+      } else {
+        setMessage("No username found as " + username);
       }
     } catch (error) {
       console.log(error);

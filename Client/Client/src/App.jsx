@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       {/* <Read /> */}
-      {/* <Create /> */}
+      <Create />
       {/* <Update /> */}
-      <Delete />
+      {/* <Delete /> */}
     </>
   );
 }
