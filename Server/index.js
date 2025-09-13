@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const info = require("./models/info_models");
-const cors = require("cors");
+const cors = require("cors"); //cross origin resource sharing
 mongoose
   .connect("mongodb://127.0.0.1:27017/auth_prac")
   .then(() => console.log("Database Connected"))
